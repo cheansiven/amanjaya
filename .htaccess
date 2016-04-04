@@ -1,0 +1,29 @@
+AddType video/webm .webm
+AddType audio/webm .weba
+AddType video/ogg .ogv
+AddType audio/ogg .ogg
+AddType video/mp4 .mp4
+AddType audio/mp4 .m4a
+AddType audio/mpeg .mp3
+
+ <IfModule mod_rewrite.c>
+     RewriteEngine On
+     RewriteCond %{HTTPS} !=on
+     RewriteCond %{HTTP_HOST} !^www\. [NC]
+     RewriteCond %{SERVER_ADDR} !=127.0.0.1
+     RewriteCond %{SERVER_ADDR} !=::1
+     RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+ </IfModule>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1
+
+#RewriteCond %{THE_REQUEST} index\.php
+#RewriteRule ^index\.php(.*)$ / [R=301,L]
+
+Redirect 301 /gallery/other.html /gallery.html
+Redirect 301 /key-west-restaurant.html /kwest-restaurant-and-lounge.html
+Redirect 301 /le-moon-bar.html /le-moon-rooftop-bar.html
+Redirect 301 /suite-for-honeymoon-with-heart.html /customize-your-stay-in-phnom-penh.html

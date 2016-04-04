@@ -1,0 +1,79 @@
+
+<!-- <footer class="footer" role="contentinfo">
+    <div class="on-ipad book-right-now">
+        <div><a href="http://www.hotelcambodia.asia/camrez/index.php?a=k&task=dobooking&selectedProperty=25" target="_blank">Book right here</a></div>
+    </div>
+</footer> -->
+
+<footer class="footer on-ipad" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="on-ipad book-right-now">
+                <div><a href="http://www.hotelcambodia.asia/camrez/index.php?a=k&task=dobooking&selectedProperty=25" target="_blank">Book right here</a></div>
+            </div>
+
+            <ul class="menu-footer">
+                <li role="presentation" class="<?php if($page_name == "room") echo "active"; ?>">
+                    <a href="<?php echo base_url('/executive-suite-room.html') ?>">Rooms & Suites</a>
+                </li>
+                <li role="presentation" class="<?php if($page_name == "business") echo "active"; ?>">
+                    <a href="<?php echo base_url('/large-suites-for-frequent-travelers.html') ?>">Business Travelers</a>
+                </li>
+                <li role="presentation" class="<?php if($page_name == "honeyMoon") echo "active"; ?>">
+                    <a href="<?php echo base_url('/suite-for-honeymoon-with-heart.html') ?>">Honey Mooners</a>
+                </li>
+                <li role="presentation" class="<?php if($page_name == "drinkDinner") echo "active"; ?>">
+                    <a href="<?php echo base_url('/kwest-restaurant-and-lounge.html') ?>">DRINKING & DINING</a>
+                </li>
+                <li role="presentation" class="<?php if($page_name == "contact") echo "active"; ?>">
+                    <a href="<?php echo base_url('/contact.html') ?>">Contact & Find Us</a>
+                </li>
+                <li role="presentation" class="<?php if($page_name == "gallery") echo "active"; ?>">
+                    <a href="<?php echo base_url('/gallery.html') ?>">Gallery</a>
+                </li>
+                <?php if($page_name != "home") { ?>
+                    <li role="presentation" class="pull-right">
+                        <a href="<?php echo base_url() ?>">Home</a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<footer class="all-menu-footer">
+    <?php if($page_name != "home") { ?>
+        <a href="<?php echo base_url() ?>" class="btn-home">home</a>
+    <?php } ?>
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="<?php if($page_name == "room") echo "active"; ?>">
+                <a href="<?php echo base_url('/executive-suite-room.html') ?>">Rooms & Suites</a>
+            </li>
+            <li role="presentation" class="<?php if($page_name == "business") echo "active"; ?>">
+                <a href="<?php echo base_url('/large-suites-for-frequent-travelers.html') ?>">Business Travelers</a>
+            </li>
+            <li role="presentation" class="<?php if($page_name == "honeyMoon") echo "active"; ?>">
+                <a href="<?php echo base_url('/suite-for-honeymoon-with-heart.html') ?>">Honey Mooners</a>
+            </li>
+            <li role="presentation" class="<?php if($page_name == "drinkDinner") echo "active"; ?>">
+                <a href="<?php echo base_url('/kwest-restaurant-and-lounge.html') ?>">DRINKING & DINING</a>
+            </li>
+            <li role="presentation" class="<?php if($page_name == "contact") echo "active"; ?>">
+                <a href="<?php echo base_url('/contact.html') ?>">Contact & Find Us</a>
+            </li>
+            <li role="presentation" class="foot-gallery <?php if($page_name == "gallery") echo "active"; ?>">
+                <a href="<?php echo base_url('/gallery.html') ?>" target="_blank">Gallery</a>
+            </li>
+        </ul>
+    </div>
+    <a href="http://www.hotelcambodia.asia/camrez/index.php?a=k&task=dobooking&selectedProperty=25" target="_blank" class="btn-check">check availability</a>
+</footer>
+
+</div>
+
+<script src="<?php echo base_url('/public/js/photoswipe.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('/public/js/photoswipe-ui-default.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('/public/js/photoswipe-custom.js') ?>" type="text/javascript"></script>
+</body>
+</html>

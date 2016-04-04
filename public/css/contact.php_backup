@@ -1,0 +1,81 @@
+<?php $this->load->view('amj/header') ?>
+<style>
+    #stretcher{
+        background:url('<?php echo base_url("/public/images/contact/amanjaya-suites-bath.jpg"); ?>') no-repeat fixed;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+<!-- Footer -->
+<div id="wrap-content" class="on-web">
+    <footer id="hl_content" class="above-footer" role="contentinfo">
+        <div class="container">
+            <ul id="hl-menu">
+                <li class="h1-menu-tabs-two"><a href="#suites">Contact us</a></li>
+                <li class="h1-menu-tabs-two"><a href="#central">Find us</a></li>
+            </ul>
+        </div>
+
+        <!--Button Popup-->
+        <a id="btn-popup" href="#" data-reveal-id="popupSuccess"></a>
+
+        <div id="hl-menu-content" class="wrap-map">
+            <div id="suites">
+                <div id="quick-form-booking">
+                    <form id="jquery-validate" class="form" method="post" action="<?php echo base_url('/booking.html') ?>">
+                        <div class="form-group">
+                            <label for="lastname">Last name</label>
+                            <input type="text" name="lastname" id="lastname" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">First name</label>
+                            <input type="text" name="firstname" id="firstname" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">eMail</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">phone number</label>
+                            <input type="text" name="phone" id="phone" required />
+                        </div>
+                        <div class="clear"></div>
+                        <input type="submit" name="submit" id="submit" value="Submit" />
+                    </form>
+                </div>
+                <div class="contect-text">
+                    <p>#1 Street 154 [ corner with Sisovath Quay ]<br />
+                    Phnom Penh<br />
+                    Kingdom of Cambodia</p>
+
+                    <p>T +855 (0) 23 21 47 47<br />
+                        F +855 (0) 23 21 95 45<br />
+
+                    reservation@amanjaya-pancam-hotel.com</p>
+                </div>
+            </div>
+            <div id="central" class="map-full-width">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7611264437137!2d104.9301673!3d11.568974599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951491fada741%3A0x9f0162265b7a4bc6!2sAmanjaya+Pancam!5e0!3m2!1sen!2skh!4v1439288375753" width="100%" height="146" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <!--Modern Popup-->
+    <!-- <div id="popupSuccess" class="reveal-modal"> -->
+        <!--<p class="text-success"><?php /*echo $this->session->userdata('message') */?></p>-->
+        <!-- <p><img src="<?php echo base_url('/public/images/success.png') ?>" align="left" style="margin-right: 25px;" /> Your email was sent successfully.</p>
+        <div class="btn-popup-close">
+            <a class="close-reveal-modal">OK</a>
+        </div>
+    </div> -->
+<?php if($this->session->userdata('message')) { ?>
+<script>
+    $(document).ready(function() {
+        $("#btn-popup").trigger("click");
+        setTimeout(function () {
+            $('a.close-reveal-modal').trigger('click');
+        }, 5000);
+    });
+</script>
+<?php } $this->session->sess_destroy(); ?>
+<?php $this->load->view('amj/footer') ?>
